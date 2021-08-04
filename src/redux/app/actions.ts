@@ -9,8 +9,8 @@ export enum ColorTheme {
 
 export enum SelectedPage {
     HOME = 0,
-    ABOUT = 1,
-    CONTACT = 2,
+    PROJECTS = 1,
+    TECHNOLOGIES = 2,
     ERROR = 3,
 }
 

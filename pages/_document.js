@@ -3,6 +3,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Document, { Head, Main, NextScript, Html } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import Script from 'next/script';
 
 export default class MyDocument extends Document {
     static getInitialProps({ renderPage }) {

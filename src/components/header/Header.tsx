@@ -1,115 +1,115 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled, { css } from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { BsMoon, BsSun } from 'react-icons/bs';
 import { useRouter } from 'next/dist/client/router';
-import { getSelectedPage } from '../../redux/app/selectors';
-import { SelectedPage, setSelectedPage } from '../../redux/app/actions';
 
-const StyledHeader = styled.div`
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    align-items: center;
-`;
-const StyledNav = styled.nav`
-    display: flex;
-`;
-const StyledLi = styled('li')<{ isSelected: boolean }>`
-    cursor: pointer;
-    user-select: none;
-    display: block;
-    padding: 3px 10px;
-    position: relative;
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: ${props => props.isSelected ? 'calc(100% - 20px)' : 0};
-        height: 3px;
-        background-color: var(--text-color);
-        transition: all .3s;
-    }
-
-    &:last-of-type {
-        margin-right: 8px;
-    }
-
-    ${props => !props.isSelected && (
-        css`&:hover {
-            background-color: var(--hover-color);
-            border-radius: 3px;
-        }`
-    )}
-}`;
+import styled from 'styled-components';
+import { getColorTheme, getSelectedPage } from '../../redux/app/selectors';
+import { ColorTheme, SelectedPage, setColorTheme, setSelectedPage } from '../../redux/app/actions';
+import { StyledHeader, StyledHeaderMargin, StyledIcon, StyledIconWrapper, StyledLi, StyledLogo, StyledNav } from './HeaderStyles';
 
 const Header: React.FC = () => {
     const dispatch = useDispatch();
     const router = useRouter();
     
     const selectedPage = useSelector(getSelectedPage);
+    const colorTheme = useSelector(getColorTheme);
 
     useEffect(() => {
         switch (router.pathname) {
-        case '/contact':
-            dispatch(setSelectedPage(SelectedPage.CONTACT));
+        case '/projects':
+            dispatch(setSelectedPage(SelectedPage.PROJECTS));
             break;
-        case '/about':
-            dispatch(setSelectedPage(SelectedPage.ABOUT));
+        case '/technologies':
+            dispatch(setSelectedPage(SelectedPage.TECHNOLOGIES));
             break;
         default:
             dispatch(setSelectedPage(SelectedPage.HOME));
             break;
         }
     }, [dispatch, router.pathname]);
+
+    const handleColorThemeChange = () => {
+        dispatch(setColorTheme(colorTheme === ColorTheme.DARK ? ColorTheme.LIGHT : ColorTheme.DARK));
+    };
     
     return (
-        <StyledHeader>
-            <Image
-                src="/logo.svg"
-                alt="logo"
-                width={50}
-                height={50}
-            />
+        <StyledHeader
+            className="header"
+        >
+            <StyledHeaderMargin>
+                <StyledLogo>
+                    <Image
+                        src="/logo.svg"
+                        alt="logo"
+                        width={50}
+                        height={50}
+                        className="logo"
+                    />
+                </StyledLogo>
 
-            <StyledNav>
-                <Link
-                    href="/"
-                    passHref
-                >
-                    <StyledLi
-                        isSelected={selectedPage === SelectedPage.HOME}
-                    >Home</StyledLi>
-                </Link>
+                <StyledNav>
+                    <StyledIconWrapper>
+                        {colorTheme === ColorTheme.DARK && (
+                            <StyledIcon
+                                onClick={handleColorThemeChange}
+                            >
+                                <BsMoon/>
+                            </StyledIcon>
+                        )}
+
+                        {colorTheme === ColorTheme.LIGHT && (
+                            <StyledIcon
+                                onClick={handleColorThemeChange}
+                            >
+                                <BsSun/>
+                            </StyledIcon>
+                        )}
+                    </StyledIconWrapper>
+                
+                    <Link
+                        href="/"
+                        passHref
+                    >
+                        <StyledLi
+                            className="styled-li"
+                            isSelected={selectedPage === SelectedPage.HOME}
+                        >
+                        Home
+                        </StyledLi>
+                    </Link>
                
-                <Link
-                    href="/about"
-                    passHref
-                >
-                    <StyledLi
-                        isSelected={selectedPage === SelectedPage.ABOUT}
+                    <Link
+                        href="/projects"
+                        passHref
                     >
-                        About
-                    </StyledLi>
-                </Link>
+                        <StyledLi
+                            isSelected={selectedPage === SelectedPage.PROJECTS}
+                        >
+                        Projects
+                        </StyledLi>
+                    </Link>
 
-                <Link
-                    href="/contact"
-                    passHref
-                >
-                    <StyledLi
-                        isSelected={selectedPage === SelectedPage.CONTACT}
+                    <Link
+                        href="/technologies"
+                        passHref
                     >
-                        Contact
-                    </StyledLi>
-                </Link>
-            </StyledNav>
+                        <StyledLi
+                            isSelected={selectedPage === SelectedPage.TECHNOLOGIES}
+                        >
+                        Technologies
+                        </StyledLi>
+                    </Link>
+                </StyledNav>
+            
+                
+            </StyledHeaderMargin>
         </StyledHeader>
     );
 };
    
+Header.displayName = 'Header';
 
 export default Header;
