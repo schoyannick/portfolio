@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 
 import Home from '../src/components/home/Home';
-import GlobalWrapper from '../src/components/global-wrapper/GlobalWrapper';
 
 const Index: React.FC = () => (
     <>
@@ -10,9 +9,7 @@ const Index: React.FC = () => (
             <title>YS</title>
         </Head>
 
-        <GlobalWrapper>
-            <Home/>
-        </GlobalWrapper>
+        <Home/>
     </>
 );
    

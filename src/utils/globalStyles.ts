@@ -1,17 +1,19 @@
 import { createGlobalStyle} from 'styled-components';
 
 export const lightTheme = {
-    body: '#FFF',
+    body: 'rgb(239 241 245)',
     text: '#363537',
     hover: '',
     scrollbar: '',
+    primary: '',
 };
 
 export const darkTheme = {
-    body: '#363537',
+    body: 'hsl(210deg, 30%, 8%)',
     text: '#FAFAFA',
     hover: '#5f5f69',
-    scrollbar: '#00000080'
+    scrollbar: '#00000080',
+    primary: 'rgb(87 115 255)',
 };
 
 export const GlobalStyles = createGlobalStyle<{
@@ -20,6 +22,7 @@ export const GlobalStyles = createGlobalStyle<{
             text: string,
             hover: string,
             scrollbar: string,
+            primary: string,
         }
     }>`
   body {
@@ -33,6 +36,7 @@ export const GlobalStyles = createGlobalStyle<{
     scrollbar-color: #80808080 transparent;
     scrollbar-width: thin;
 
+    ---primary-color: ${({ theme }) => theme.primary};
     --background-color: ${({ theme}) => theme.body};
     --text-color: ${({ theme }) => theme.text};
     --hover-color: ${({ theme }) => theme.hover};
@@ -62,6 +66,14 @@ export const GlobalStyles = createGlobalStyle<{
             transition: width .3s, background-color .5s linear;
             background-color: ${({ theme }) => theme.text};
         }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .skill-icon {
+        color: var(--text-color);
     }
   }
 `;

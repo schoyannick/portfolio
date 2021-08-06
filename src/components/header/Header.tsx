@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Image from 'next/image';
 import Link from 'next/link';
 import { BsMoon, BsSun } from 'react-icons/bs';
 import { useRouter } from 'next/dist/client/router';
 
-import styled from 'styled-components';
 import { getColorTheme, getSelectedPage } from '../../redux/app/selectors';
 import { ColorTheme, SelectedPage, setColorTheme, setSelectedPage } from '../../redux/app/actions';
-import { StyledHeader, StyledHeaderMargin, StyledIcon, StyledIconWrapper, StyledLi, StyledLogo, StyledNav } from './HeaderStyles';
+import { StyledHeader, StyledHeaderMargin, StyledIcon, StyledIconWrapper, StyledItems, StyledLi, StyledLogo, StyledNav } from './HeaderStyles';
+import SwipeMenu from './swipe-menu/SwipeMenu';
 
 const Header: React.FC = () => {
     const dispatch = useDispatch();
@@ -22,8 +21,8 @@ const Header: React.FC = () => {
         case '/projects':
             dispatch(setSelectedPage(SelectedPage.PROJECTS));
             break;
-        case '/technologies':
-            dispatch(setSelectedPage(SelectedPage.TECHNOLOGIES));
+        case '/skills':
+            dispatch(setSelectedPage(SelectedPage.SKILLS));
             break;
         default:
             dispatch(setSelectedPage(SelectedPage.HOME));
@@ -41,67 +40,65 @@ const Header: React.FC = () => {
         >
             <StyledHeaderMargin>
                 <StyledLogo>
-                    <Image
-                        src="/logo.svg"
-                        alt="logo"
-                        width={50}
-                        height={50}
-                        className="logo"
-                    />
+                    Yannick Scho
                 </StyledLogo>
 
                 <StyledNav>
                     <StyledIconWrapper>
-                        {colorTheme === ColorTheme.DARK && (
-                            <StyledIcon
-                                onClick={handleColorThemeChange}
-                            >
-                                <BsMoon/>
-                            </StyledIcon>
-                        )}
+                        <StyledIcon
+                            onClick={handleColorThemeChange}
+                            isActive={colorTheme === ColorTheme.DARK}
+                        >
+                            <BsMoon/>
+                        </StyledIcon>
 
-                        {colorTheme === ColorTheme.LIGHT && (
-                            <StyledIcon
-                                onClick={handleColorThemeChange}
-                            >
-                                <BsSun/>
-                            </StyledIcon>
-                        )}
+                        <StyledIcon
+                            onClick={handleColorThemeChange}
+                            isActive={colorTheme === ColorTheme.LIGHT}
+                        >
+                            <BsSun/>
+                        </StyledIcon>
                     </StyledIconWrapper>
                 
-                    <Link
-                        href="/"
-                        passHref
-                    >
-                        <StyledLi
-                            className="styled-li"
-                            isSelected={selectedPage === SelectedPage.HOME}
+                    <StyledItems>
+                        <Link
+                            href="/"
+                            passHref
                         >
+                            <StyledLi
+                                className="styled-li"
+                                isSelected={selectedPage === SelectedPage.HOME}
+                            >
                         Home
-                        </StyledLi>
-                    </Link>
+                            </StyledLi>
+                        </Link>
                
-                    <Link
-                        href="/projects"
-                        passHref
-                    >
-                        <StyledLi
-                            isSelected={selectedPage === SelectedPage.PROJECTS}
+                        <Link
+                            href="/projects"
+                            passHref
                         >
+                            <StyledLi
+                                className="styled-li"
+                                isSelected={selectedPage === SelectedPage.PROJECTS}
+                            >
                         Projects
-                        </StyledLi>
-                    </Link>
+                            </StyledLi>
+                        </Link>
 
-                    <Link
-                        href="/technologies"
-                        passHref
-                    >
-                        <StyledLi
-                            isSelected={selectedPage === SelectedPage.TECHNOLOGIES}
+                        <Link
+                            href="/skills"
+                            passHref
                         >
-                        Technologies
-                        </StyledLi>
-                    </Link>
+                            <StyledLi
+                                className="styled-li"
+                                isSelected={selectedPage === SelectedPage.SKILLS}
+                            >
+                                Skills
+                            </StyledLi>
+                        </Link>
+                    </StyledItems>
+                    
+                    <SwipeMenu/>
                 </StyledNav>
             
                 

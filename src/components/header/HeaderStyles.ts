@@ -4,8 +4,8 @@ export const StyledHeader = styled.div`
     height: 70px;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    max-width: 1100px;
+    width: calc(100% - 40px);
 `;
 
 export const StyledHeaderMargin = styled.div`
@@ -17,12 +17,23 @@ export const StyledHeaderMargin = styled.div`
 `;
 
 export const StyledLogo = styled.div`
-    margin-left: 8px;
+    color: var(---primary-color);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
 `;
 
 export const StyledNav = styled.nav`
     display: flex;
     align-items: center;
+`;
+
+export const StyledItems = styled.div`
+    display: flex;
+
+    @media only screen and (max-width: 400px) {
+        display: none;
+    }
 `;
 
 export const StyledLi = styled('li')<{ isSelected: boolean }>`
@@ -31,6 +42,7 @@ export const StyledLi = styled('li')<{ isSelected: boolean }>`
     display: block;
     padding: 3px 10px;
     position: relative;
+    overflow: hidden;
 
     &:after {
         content: '';
@@ -38,10 +50,6 @@ export const StyledLi = styled('li')<{ isSelected: boolean }>`
         position: absolute;
         width: ${props => props.isSelected ? 'calc(100% - 20px)' : 0};
         height: 3px;
-    }
-
-    &:last-of-type {
-        margin-right: 8px;
     }
 
     ${props => !props.isSelected && (
@@ -56,10 +64,25 @@ export const StyledIconWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin-right: 3vw;
+    position: relative;
+    height: 25px;
+    width: 20px;
 `;
 
-export const StyledIcon = styled.div`
+export const StyledIcon = styled('div')<{ isActive: boolean }>`
     cursor: pointer;
     padding: 3px;
     margin: -3px;
+    margin-top: 2px;
+    transition: opacity .5s, transform .5s;
+    transform: ${props => !props.isActive ? 'rotate(-180deg) scale(.5)' : ''};
+    opacity: ${props => !props.isActive ? '0' : '1'};
+    position: absolute;
+    top: 0;
+    z-index: ${props => !props.isActive ? '0' : '10'};
+
+    &:hover {
+        background-color: var(--hover-color);
+        border-radius: 3px;
+    }
 `;

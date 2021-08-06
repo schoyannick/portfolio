@@ -5,13 +5,15 @@ import { ColorTheme } from '../../redux/app/actions';
 import { getColorTheme } from '../../redux/app/selectors';
 import { darkTheme, GlobalStyles, lightTheme } from '../../utils/globalStyles';
 import Header from '../header/Header';
+import Footer from './footer/Footer';
 import { StyledGlobalWrapper, StyledGlobalWrapperContent } from './GlobalWrapperStyles';
 
 const GlobalWrapper: React.FC = ({
-    children,
+    Component,
+    pageProps,
 }) => {
     const colorTheme = useSelector(getColorTheme);
-
+    
     return (
         <ThemeProvider
             theme={colorTheme === ColorTheme.LIGHT ? lightTheme : darkTheme}
@@ -20,9 +22,11 @@ const GlobalWrapper: React.FC = ({
             <StyledGlobalWrapper>
                 <Header/>
                 <StyledGlobalWrapperContent>
-                    {children}
+                    <Component {...pageProps}/>
                 </StyledGlobalWrapperContent>
             </StyledGlobalWrapper>
+
+            <Footer/>
         </ThemeProvider>
     );
 };

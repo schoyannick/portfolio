@@ -10,6 +10,10 @@ export const StyledGlobalWrapper = styled.div`
 export const StyledGlobalWrapperContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: calc(100% - 10vw);
+    width: 100%;
+    max-width: 1100px;
     align-items: center;
+    margin-left: 1px;
+    margin-top: 120px;
+    min-height: calc(100vh - 120px);
 `;

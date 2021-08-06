@@ -30,7 +30,9 @@
 	"quotes": ["error", "single"],
 	"no-unused-vars": "off",
 	"@typescript-eslint/no-unused-vars": "off",
-	"no-param-reassign": ["off", { "props": true, "ignorePropertyModificationsForRegex": ["draft"] }]
+	"no-param-reassign": ["off", { "props": true, "ignorePropertyModificationsForRegex": ["draft"] }],
+	"import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+	"comma-dangle": ["error", "always-multiline"]
   },
   "parser": "@babel/eslint-parser"
 }
