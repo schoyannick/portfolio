@@ -1,5 +1,5 @@
 {
-  "extends": ["next", "airbnb", "airbnb/hooks", "prettier", "plugin:@typescript-eslint/recommended"],
+  "extends": ["next", "airbnb", "airbnb/hooks", "prettier", "plugin:@typescript-eslint/recommended", "babel-plugin-styled-components"],
   "rules": {
     "react/prop-types": "off",
 	"react/require-default-props": "off",

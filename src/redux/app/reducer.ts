@@ -2,7 +2,7 @@ import { createReducer } from '@reduxjs/toolkit';
 import { ColorTheme, SelectedPage, setColorTheme, setSelectedPage } from './actions';
 
 const initialState = {
-    colorTheme: ColorTheme.DARK,
+    colorTheme: ColorTheme.LIGHT,
     selectedPage: SelectedPage.HOME,
 };
 
