@@ -7,11 +7,11 @@ import SkillIcon from './skill-icon/SkillIcon';
 const SkillsComponent: React.FC = () => (
     <StyledSkillsComponentWrapper>
         <StyledSkillsComponentHeader>
-                Skills.
+            Skills.
         </StyledSkillsComponentHeader>
 
         <StyledSkillsComponentIntro>
-                Frontend developer with experience in the following technologies
+            Web developer with experience in the following technologies
         </StyledSkillsComponentIntro>
 
         <StyledSkillsWrapper>
@@ -19,10 +19,10 @@ const SkillsComponent: React.FC = () => (
                 <StyledSkillsIconWrapper
                     key={skill.type}
                 >
-                    <p>{skill.title}</p>
                     <SkillIcon
                         type={skill.type}
                     />
+                    <p>{skill.title}</p>
                 </StyledSkillsIconWrapper>
             ))}
         </StyledSkillsWrapper>

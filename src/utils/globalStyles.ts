@@ -67,6 +67,7 @@ export const GlobalStyles = createGlobalStyle<{
 
     .skill-icon {
         color: var(--text-color);
+        margin-bottom: 10px;
     }
   }
 `;
