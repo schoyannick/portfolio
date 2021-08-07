@@ -31,7 +31,7 @@ export const StyledNav = styled.nav`
 export const StyledItems = styled.div`
     display: flex;
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 450px) {
         display: none;
     }
 `;

@@ -5,6 +5,7 @@ export const StyledGlobalWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 `;
 
 export const StyledGlobalWrapperContent = styled.div`
@@ -13,7 +14,8 @@ export const StyledGlobalWrapperContent = styled.div`
     width: 100%;
     max-width: 1100px;
     align-items: center;
-    margin-left: 1px;
-    margin-top: 120px;
-    min-height: calc(100vh - 120px);
+    margin-top: 90px;
+    min-height: calc(100vh - 90px);
+    max-width: 1100px;
+    width: calc(100% - 40px);
 `;

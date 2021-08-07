@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SKILLS_DATA, SkillTypes } from './skillsData';
-import { StyledSkillsComponentHeader, StyledSkillsComponentIntro, StyledSkillsComponentWrapper, StyledSkillsWrapper } from './StyledSkillsComponent';
+import { StyledSkillsComponentHeader, StyledSkillsComponentIntro, StyledSkillsComponentWrapper, StyledSkillsIconWrapper, StyledSkillsWrapper } from './StyledSkillsComponent';
 import SkillIcon from './skill-icon/SkillIcon';
 
 const SkillsComponent: React.FC = () => (
@@ -16,14 +16,14 @@ const SkillsComponent: React.FC = () => (
 
         <StyledSkillsWrapper>
             {SKILLS_DATA.map((skill: { title: string, type: SkillTypes }) => (
-                <div
+                <StyledSkillsIconWrapper
                     key={skill.type}
                 >
                     <p>{skill.title}</p>
                     <SkillIcon
                         type={skill.type}
                     />
-                </div>
+                </StyledSkillsIconWrapper>
             ))}
         </StyledSkillsWrapper>
           
