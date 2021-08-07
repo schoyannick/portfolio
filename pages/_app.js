@@ -4,10 +4,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import { store } from '../src/redux/store';
 import GlobalWrapper from '../src/components/global-wrapper/GlobalWrapper';
+import { useStore } from '../src/redux/store';
 
 function MyApp({ Component, pageProps }) {
+    const store = useStore(pageProps.initialReduxState);
+
     return (
         <Provider store={store}>
             <GlobalWrapper Component={Component} pageProps={pageProps}/>

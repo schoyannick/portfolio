@@ -21,5 +21,7 @@ export const SKILLS_DATA = [{
 //     title: 'Next.js'
 // }, {
 //     title: 'Node.js'
+// }, {
+    // title: 'Responsive Web Design'
 // }
 ];

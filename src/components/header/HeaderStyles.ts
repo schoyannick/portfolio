@@ -42,14 +42,16 @@ export const StyledLi = styled('li')<{ isSelected: boolean }>`
     display: block;
     padding: 3px 10px;
     position: relative;
-    overflow: hidden;
+    font-size: 17px;
 
     &:after {
         content: '';
         display: block;
         position: absolute;
-        width: ${props => props.isSelected ? 'calc(100% - 20px)' : 0};
+        width: ${props => props.isSelected ? 'calc(100% - 20px)' : '0px'};
         height: 3px;
+        transition: width .3s, background-color .5s linear;
+        background-color: var(--text-color);
     }
 
     ${props => !props.isSelected && (

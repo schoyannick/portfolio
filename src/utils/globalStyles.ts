@@ -61,13 +61,6 @@ export const GlobalStyles = createGlobalStyle<{
         background-color: ${({ theme }) => theme.body};
     }
 
-    .styled-li {
-        &:after {
-            transition: width .3s, background-color .5s linear;
-            background-color: ${({ theme }) => theme.text};
-        }
-    }
-
     p {
         margin: 0;
     }

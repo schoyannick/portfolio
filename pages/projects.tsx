@@ -1,5 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
+import { handleGetStaticProps } from '../src/utils/handleGetStaticProps';
+import { SelectedPage } from '../src/redux/app/actions';
 
 const Projects: React.FC = () => (
     <>
@@ -10,7 +13,9 @@ const Projects: React.FC = () => (
         <p>Projects</p>
     </>
 );
-   
+
+export const getStaticProps: GetStaticProps = (context) => handleGetStaticProps(context, SelectedPage.PROJECTS);
+
 Projects.displayName = 'Projects';
 
 export default Projects;
