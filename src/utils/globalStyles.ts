@@ -23,7 +23,8 @@ export const GlobalStyles = createGlobalStyle<{
             hover: string,
             scrollbar: string,
             primary: string,
-        }
+        },
+        isOverlayShown: boolean
     }>`
   body {
     background-color: ${({ theme }) => theme.body};
@@ -35,6 +36,7 @@ export const GlobalStyles = createGlobalStyle<{
     box-sizing: border-box;
     scrollbar-color: #80808080 transparent;
     scrollbar-width: thin;
+    overflow: ${({ isOverlayShown }) => isOverlayShown ? 'hidden' : 'auto'};
 
     ---primary-color: ${({ theme }) => theme.primary};
     --background-color: ${({ theme}) => theme.body};

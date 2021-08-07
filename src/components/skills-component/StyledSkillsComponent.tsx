@@ -27,7 +27,7 @@ export const StyledSkillsWrapper = styled.div`
     }
 
     @media only screen and (max-width: 200px) {
-        grid-template-columns: repeat(1fr);
+        grid-template-columns: 1fr;
     }
 `;
 

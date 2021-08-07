@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { SKILLS_DATA, SkillTypes } from './skillsData';
 import { StyledSkillsComponentHeader, StyledSkillsComponentIntro, StyledSkillsComponentWrapper, StyledSkillsIconWrapper, StyledSkillsWrapper } from './StyledSkillsComponent';
 import SkillIcon from './skill-icon/SkillIcon';
+import { SKILLS_DATA, SkillTypes } from '../../constants/skillsData';
 
 const SkillsComponent: React.FC = () => (
     <StyledSkillsComponentWrapper>

@@ -1,10 +1,10 @@
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import { InferProps } from 'prop-types';
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { ColorTheme } from '../../redux/app/actions';
-import { getColorTheme } from '../../redux/app/selectors';
+import { ColorTheme, setMetrics } from '../../redux/app/actions';
+import { getColorTheme, getIsOverlayShown } from '../../redux/app/selectors';
 import { darkTheme, GlobalStyles, lightTheme } from '../../utils/globalStyles';
 import Header from '../header/Header';
 import Footer from './footer/Footer';
@@ -19,15 +19,36 @@ const GlobalWrapper: React.FC<InferProps<typeof propTypes>> = ({
     Component,
     pageProps,
 }: AppProps) => {
+    const dispatch = useDispatch();
     const colorTheme = useSelector(getColorTheme);
+    const isOverlayShown = useSelector(getIsOverlayShown);
+
+    useEffect(() => {
+        const handleResize = () => {
+            dispatch(setMetrics({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            }));
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [dispatch]);
     
     return (
         <ThemeProvider
             theme={colorTheme === ColorTheme.LIGHT ? lightTheme : darkTheme}
         >
-            <GlobalStyles/>
+            <GlobalStyles
+                isOverlayShown={isOverlayShown}
+            />
             <StyledGlobalWrapper>
-                {/* <Overlay/> */}
+                <Overlay/>
                 <Header/>
                 <StyledGlobalWrapperContent
                     key={Component.displayName}

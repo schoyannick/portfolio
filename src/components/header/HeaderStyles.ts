@@ -6,6 +6,7 @@ export const StyledHeader = styled.div`
     top: 0;
     max-width: 1100px;
     width: calc(100% - 40px);
+    z-index: 1;
 `;
 
 export const StyledHeaderMargin = styled.div`

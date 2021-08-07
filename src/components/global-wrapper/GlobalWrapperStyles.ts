@@ -15,7 +15,7 @@ export const StyledGlobalWrapperContent = styled.div`
     max-width: 1100px;
     align-items: center;
     margin-top: 90px;
-    min-height: calc(100vh - 90px);
+    min-height: 300px;
     max-width: 1100px;
     width: calc(100% - 40px);
     animation: fadeIn .3s linear;

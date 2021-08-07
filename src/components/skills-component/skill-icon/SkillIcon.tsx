@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes, { InferProps } from 'prop-types';
 
-import { SkillTypes } from '../skillsData';
 import ReactIcon from './react-icon/ReactIcon';
 import JavaScriptIcon from './javascript-icon/JavaScriptIcon';
 import CssIcon from './css-icon/CssIcon';
@@ -12,6 +11,7 @@ import NextIcon from './next-js-icon/NextIcon';
 import NodeJsIcon from './node-js-icon/NodeJsIcon';
 import ResponseDesignIcon from './responsive-design-icon/ResponseDesignIcon';
 import GitIcon from './git-icon/GitIcon';
+import { SkillTypes } from '../../../constants/skillsData';
 
 const propTypes = {
     type: PropTypes.number.isRequired,

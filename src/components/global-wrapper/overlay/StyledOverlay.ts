@@ -5,16 +5,16 @@ export const StyledOverlayWrapper = styled.div`
 `;
 
 export const StyledOverlay = styled('div')<{ isActive: boolean }>`
-    position: absolute;
+    position: fixed;
     opacity: 0;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 10;
     pointer-events: none;
     background: rgba(0,0,0, .3);
-    transition: all .3s;
+    transition: opacity .3s;
 
     ${props => props.isActive && (
         css`
@@ -24,13 +24,13 @@ export const StyledOverlay = styled('div')<{ isActive: boolean }>`
     )}
 `;
 
-export const StyledMenu = styled('div')`
-    position: absolute;
-    background-color: red;
-    z-index: 10;
+export const StyledMenu = styled('div')<{ disableAnimation : boolean }>`
+    position: fixed;
+    background-color: var(--background-color);
+    z-index: 20;
     width: 75%;
     height: 100%;
-    transition: all .3s;
+    transition: ${props => props.disableAnimation ? 'none' : '.3s all'};
     transform: translateX(100%);
     right: 0;
     top: 0;
