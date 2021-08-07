@@ -8,6 +8,7 @@ export enum SkillTypes {
     NEXT_JS = 6,
     NODE_JS = 7,
     RESPONSIVE_DESIGN = 8,
+    GIT = 9,
 }
 
 export const SKILLS_DATA = [
@@ -20,8 +21,7 @@ export const SKILLS_DATA = [
     }, {
         title: 'HTML',
         type: SkillTypes.HTML,
-    },
-    {
+    }, {
         title: 'CSS',
         type: SkillTypes.CSS,
     }, {
@@ -39,5 +39,8 @@ export const SKILLS_DATA = [
     }, {
         title: 'Responsive Design',
         type: SkillTypes.RESPONSIVE_DESIGN,
+    }, {
+        title: 'Git',
+        type: SkillTypes.GIT,
     },
 ];

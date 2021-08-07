@@ -10,6 +10,8 @@ import SassIcon from './sass-icon/SassIcon';
 import ReduxIcon from './redux-icon/ReduxIcon';
 import NextIcon from './next-js-icon/NextIcon';
 import NodeJsIcon from './node-js-icon/NodeJsIcon';
+import ResponseDesignIcon from './responsive-design-icon/ResponseDesignIcon';
+import GitIcon from './git-icon/GitIcon';
 
 const propTypes = {
     type: PropTypes.number.isRequired,
@@ -63,6 +65,18 @@ const SkillIcon: React.FC<InferProps<typeof propTypes>> = ({
     if (type === SkillTypes.NODE_JS) {
         return (
             <NodeJsIcon/>
+        );
+    }
+
+    if (type === SkillTypes.RESPONSIVE_DESIGN) {
+        return (
+            <ResponseDesignIcon/>
+        );
+    }
+
+    if (type === SkillTypes.GIT) {
+        return (
+            <GitIcon/>
         );
     }
 
