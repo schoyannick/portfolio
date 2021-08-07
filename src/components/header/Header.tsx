@@ -64,6 +64,7 @@ const Header: React.FC = () => {
                         <Link
                             href="/"
                             passHref
+                            shallow
                         >
                             <StyledLi
                                 className="styled-li"
@@ -76,6 +77,7 @@ const Header: React.FC = () => {
                         <Link
                             href="/projects"
                             passHref
+                            shallow
                         >
                             <StyledLi
                                 className="styled-li"
@@ -88,6 +90,7 @@ const Header: React.FC = () => {
                         <Link
                             href="/skills"
                             passHref
+                            shallow
                         >
                             <StyledLi
                                 className="styled-li"

@@ -25,15 +25,7 @@ function initStore(preloadedState = initialState) {
 export type RootState = ReturnType<typeof store.getState>;
 
 export const initializeStore = (preloadedState?: RootState): RootState => {
-    let newStore = store ?? initStore(preloadedState);
-  
-    if (preloadedState && store) {
-        newStore = initStore({
-            ...store.getState(),
-            ...preloadedState,
-        });
-        store = undefined;
-    }
+    const newStore = store ?? initStore(preloadedState);
   
     if (typeof window === 'undefined') return newStore;
     if (!store) store = newStore;
