@@ -9,6 +9,7 @@ import { darkTheme, GlobalStyles, lightTheme } from '../../utils/globalStyles';
 import Header from '../header/Header';
 import Footer from './footer/Footer';
 import { StyledGlobalWrapper, StyledGlobalWrapperContent } from './GlobalWrapperStyles';
+import Overlay from './overlay/Overlay';
 
 const propTypes = {
     
@@ -26,6 +27,7 @@ const GlobalWrapper: React.FC<InferProps<typeof propTypes>> = ({
         >
             <GlobalStyles/>
             <StyledGlobalWrapper>
+                {/* <Overlay/> */}
                 <Header/>
                 <StyledGlobalWrapperContent
                     key={Component.displayName}
