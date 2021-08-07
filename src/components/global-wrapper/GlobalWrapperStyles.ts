@@ -18,4 +18,14 @@ export const StyledGlobalWrapperContent = styled.div`
     min-height: calc(100vh - 90px);
     max-width: 1100px;
     width: calc(100% - 40px);
+    animation: fadeIn .3s linear;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 `;

@@ -100,11 +100,8 @@ const Header: React.FC = () => {
                             </StyledLi>
                         </Link>
                     </StyledItems>
-                    
                     <SwipeMenu/>
                 </StyledNav>
-            
-                
             </StyledHeaderMargin>
         </StyledHeader>
     );

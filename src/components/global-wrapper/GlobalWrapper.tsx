@@ -27,7 +27,9 @@ const GlobalWrapper: React.FC<InferProps<typeof propTypes>> = ({
             <GlobalStyles/>
             <StyledGlobalWrapper>
                 <Header/>
-                <StyledGlobalWrapperContent>
+                <StyledGlobalWrapperContent
+                    key={Component.displayName}
+                >
                     <Component {...pageProps}/>
                 </StyledGlobalWrapperContent>
             </StyledGlobalWrapper>

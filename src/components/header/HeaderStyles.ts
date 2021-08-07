@@ -76,7 +76,7 @@ export const StyledIcon = styled('div')<{ isActive: boolean }>`
     padding: 3px;
     margin: -3px;
     margin-top: 2px;
-    transition: opacity .5s, transform .5s;
+    transition: all .5s;
     transform: ${props => !props.isActive ? 'rotate(-180deg) scale(.5)' : ''};
     opacity: ${props => !props.isActive ? '0' : '1'};
     position: absolute;

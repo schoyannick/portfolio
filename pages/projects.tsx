@@ -1,8 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
+
 import { handleGetStaticProps } from '../src/utils/handleGetStaticProps';
 import { SelectedPage } from '../src/redux/app/actions';
+import ProjectsComponent from '../src/components/projects-component/ProjectsComponent';
 
 const Projects: React.FC = () => (
     <>
@@ -10,7 +12,7 @@ const Projects: React.FC = () => (
             <title>YS - Projects</title>
         </Head>
 
-        <p>Projects</p>
+        <ProjectsComponent/>
     </>
 );
 
