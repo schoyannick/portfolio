@@ -12,6 +12,7 @@ import NodeJsIcon from './node-js-icon/NodeJsIcon';
 import ResponseDesignIcon from './responsive-design-icon/ResponseDesignIcon';
 import GitIcon from './git-icon/GitIcon';
 import { SkillTypes } from '../../../constants/skillsData';
+import TypeScriptIcon from './typescript-icon/TypeScriptIcon';
 
 const propTypes = {
     type: PropTypes.number.isRequired,
@@ -29,6 +30,12 @@ const SkillIcon: React.FC<InferProps<typeof propTypes>> = ({
     if (type === SkillTypes.JAVASCRIPT) {
         return (
             <JavaScriptIcon/>
+        );
+    }
+
+    if (type === SkillTypes.TYPESCRIPT) {
+        return (
+            <TypeScriptIcon/>
         );
     }
 

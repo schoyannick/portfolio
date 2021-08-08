@@ -9,16 +9,22 @@ export enum SkillTypes {
     NODE_JS = 7,
     RESPONSIVE_DESIGN = 8,
     GIT = 9,
+    TYPESCRIPT = 10,
 }
 
 export const SKILLS_DATA = [
     {
         title: 'React',
         type: SkillTypes.REACT,
-    },{
+    }, {
         title: 'Javascript',
         type: SkillTypes.JAVASCRIPT,
-    }, {
+    },
+    // {
+    //     title: 'Typescript',
+    //     type: SkillTypes.TYPESCRIPT,
+    // },
+    {
         title: 'HTML',
         type: SkillTypes.HTML,
     }, {
