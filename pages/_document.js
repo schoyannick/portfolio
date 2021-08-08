@@ -39,6 +39,10 @@ export default class MyDocument extends Document {
                     
                 >
                     <meta name="description" content="Yannick Scho - Web developer portfolio" />
+                    <link rel="manifest" href="/manifest.json"/>
+                    <meta name="theme-color" content="#eff1f5" />
+                    <link rel="apple-touch-icon" href="/logo_96x96.png" />
+                    <meta name="apple-mobile-web-app-status-bar" content="#eff1f5" />
                 </Head>
                 <body>
                     <Main />
