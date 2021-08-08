@@ -5,9 +5,10 @@ export const StyledNav = styled.nav`
     align-items: center;
 `;
 
-export const StyledItems = styled.div`
+export const StyledItems = styled.ul`
     display: flex;
-
+    margin: 0;
+    
     @media only screen and (max-width: 450px) {
         display: none;
     }
