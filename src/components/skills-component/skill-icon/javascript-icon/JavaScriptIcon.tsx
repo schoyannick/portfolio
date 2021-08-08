@@ -4,8 +4,6 @@ const JavaScriptIcon: React.FC = () => (
     <svg 
         className="skill-icon" 
         fill="currentColor"
-        width="80px"
-        height="80px"
         strokeWidth="0" 
         version="1.1" 
         viewBox="0 0 32 32" 

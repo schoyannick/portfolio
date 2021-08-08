@@ -4,8 +4,6 @@ const ReduxIcon: React.FC = () => (
     <svg
         className="skill-icon" 
         fill="currentColor" 
-        width="80px" 
-        height="80px"
         viewBox="0 0 256 244" 
         version="1.1" 
         xmlns="http://www.w3.org/2000/svg"

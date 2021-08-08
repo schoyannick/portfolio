@@ -8,7 +8,7 @@ import { getColorTheme, getIsOverlayShown } from '../../redux/app/selectors';
 import { darkTheme, GlobalStyles, lightTheme } from '../../utils/globalStyles';
 import Header from '../header/Header';
 import Footer from './footer/Footer';
-import { StyledGlobalWrapper, StyledGlobalWrapperContent } from './GlobalWrapperStyles';
+import { StyledGlobalWrapper, StyledGlobalWrapperContent } from './StypedGlobalWrapper';
 import Overlay from './overlay/Overlay';
 
 const propTypes = {

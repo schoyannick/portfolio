@@ -5,7 +5,8 @@ export const lightTheme = {
     text: '#363537',
     hover: '',
     scrollbar: '',
-    primary: '',
+    primary: 'rgb(68 51 255)',
+    grey: 'rgb(90 96 114)',
 };
 
 export const darkTheme = {
@@ -14,6 +15,7 @@ export const darkTheme = {
     hover: '#5f5f69',
     scrollbar: '#00000080',
     primary: 'rgb(87 115 255)',
+    grey: 'rgb(156 168 180)',
 };
 
 export const GlobalStyles = createGlobalStyle<{
@@ -23,6 +25,7 @@ export const GlobalStyles = createGlobalStyle<{
             hover: string,
             scrollbar: string,
             primary: string,
+            grey: string,
         },
         isOverlayShown: boolean
     }>`
@@ -38,11 +41,12 @@ export const GlobalStyles = createGlobalStyle<{
     scrollbar-width: thin;
     overflow: ${({ isOverlayShown }) => isOverlayShown ? 'hidden' : 'auto'};
 
-    ---primary-color: ${({ theme }) => theme.primary};
+    --primary-color: ${({ theme }) => theme.primary};
     --background-color: ${({ theme}) => theme.body};
     --text-color: ${({ theme }) => theme.text};
     --hover-color: ${({ theme }) => theme.hover};
     --scrollbar-color: ${({ theme }) => theme.scrollbar};
+    --grey-color:  ${({ theme }) => theme.grey};
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -70,6 +74,8 @@ export const GlobalStyles = createGlobalStyle<{
     .skill-icon {
         color: var(--text-color);
         margin-bottom: 10px;
+        width: 80px;
+        height: 80px;
     }
   }
 `;

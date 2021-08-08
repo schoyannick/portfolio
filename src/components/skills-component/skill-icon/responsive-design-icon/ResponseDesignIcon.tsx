@@ -4,12 +4,8 @@ const ResponseDesignIcon: React.FC = () => (
     <svg
         className="skill-icon" 
         fill="currentColor"
-        width="80px"
-        height="80px"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px" 
-        y="0px"
         viewBox="0 0 512 512"
         enableBackground="new 0 0 512 512"
         xmlSpace="preserve"

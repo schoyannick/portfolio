@@ -18,7 +18,7 @@ export const StyledHeaderMargin = styled.div`
 `;
 
 export const StyledLogo = styled.div`
-    color: var(---primary-color);
+    color: var(--primary-color);
     font-size: 24px;
     font-weight: bold;
     letter-spacing: -1px;
