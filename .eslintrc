@@ -1,7 +1,10 @@
 {
-  "extends": ["next", "airbnb", "airbnb/hooks", "prettier", "plugin:@typescript-eslint/recommended"],
-  "rules": {
-    "react/prop-types": "off",
+	"env": {
+		"browser": true
+	},
+	"extends": ["next", "airbnb", "airbnb/hooks", "prettier", "plugin:@typescript-eslint/recommended"],
+	"rules": {
+		"react/prop-types": "off",
 	"react/require-default-props": "off",
   	"import/extensions": [
 		"error",
@@ -34,7 +37,8 @@
 	"import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
 	"comma-dangle": ["error", "always-multiline"],
 	"object-property-newline": "error",
-	"function-paren-newline": "error"
+	"function-paren-newline": "error",
+	"no-restricted-globals": "off"
   },
   "parser": "@babel/eslint-parser"
 }
