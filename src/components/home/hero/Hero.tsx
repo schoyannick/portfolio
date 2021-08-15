@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Hero: React.FC = () => {
-    console.log('hero');
+    console.log('');
     
     return (
         <p>Hero Section</p>
