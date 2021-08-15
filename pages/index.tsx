@@ -6,7 +6,7 @@ import Home from '../src/components/home/Home';
 const Index: React.FC = () => (
     <>
         <Head>
-            <title>YS</title>
+            <title>Yannick Scho</title>
         </Head>
 
         <Home/>

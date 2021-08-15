@@ -9,7 +9,7 @@ import { SelectedPage } from '../src/redux/app/actions';
 const Skills: React.FC = () => (
     <>
         <Head>
-            <title>YS - Skills</title>
+            <title>Yannick Scho - Skills</title>
         </Head>
 
         <SkillsComponent/>

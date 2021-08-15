@@ -9,7 +9,7 @@ import ProjectsComponent from '../src/components/projects-component/ProjectsComp
 const Projects: React.FC = () => (
     <>
         <Head>
-            <title>YS - Projects</title>
+            <title>Yannick Scho - Projects</title>
         </Head>
 
         <ProjectsComponent/>
