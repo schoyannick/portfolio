@@ -3,6 +3,7 @@ import { createGlobalStyle} from 'styled-components';
 export const lightTheme = {
     body: 'rgb(239 241 245)',
     text: '#363537',
+    reverse: 'white',
     hover: '',
     scrollbar: '',
     primary: 'rgb(68 51 255)',
@@ -12,6 +13,7 @@ export const lightTheme = {
 export const darkTheme = {
     body: 'hsl(210deg, 30%, 8%)',
     text: '#FAFAFA',
+    reverse: 'black',
     hover: '#5f5f69',
     scrollbar: '#00000080',
     primary: 'rgb(87 115 255)',
@@ -26,6 +28,7 @@ export const GlobalStyles = createGlobalStyle<{
             scrollbar: string,
             primary: string,
             grey: string,
+            reverse: string,
         },
         isOverlayShown: boolean
     }>`
@@ -46,7 +49,8 @@ export const GlobalStyles = createGlobalStyle<{
     --text-color: ${({ theme }) => theme.text};
     --hover-color: ${({ theme }) => theme.hover};
     --scrollbar-color: ${({ theme }) => theme.scrollbar};
-    --grey-color:  ${({ theme }) => theme.grey};
+    --grey-color: ${({ theme }) => theme.grey};
+    --text-color-reverse: ${({ theme }) => theme.reverse};
 
     &::-webkit-scrollbar {
         width: 5px;

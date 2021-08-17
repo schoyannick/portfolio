@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const StyledSkillsComponentWrapper = styled.div`
     width: 100%;
+    margin-bottom: 20px;
 `;
 
 export const StyledSkillsComponentHeader = styled.h1`
