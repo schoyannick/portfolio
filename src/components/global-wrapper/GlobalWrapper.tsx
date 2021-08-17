@@ -10,6 +10,7 @@ import Header from '../header/Header';
 import Footer from './footer/Footer';
 import { StyledGlobalWrapper, StyledGlobalWrapperContent } from './StypedGlobalWrapper';
 import Overlay from './overlay/Overlay';
+import Contact from './contact/Contact';
 
 const propTypes = {
     
@@ -57,6 +58,7 @@ const GlobalWrapper: React.FC<InferProps<typeof propTypes>> = ({
                 </StyledGlobalWrapperContent>
             </StyledGlobalWrapper>
 
+            <Contact/>
             <Footer/>
         </ThemeProvider>
     );

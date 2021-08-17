@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
                 lang="en"
             >
                 <Head>
-                    <meta charset="UTF-8"/>
+                    <meta charSet="UTF-8"/>
                     <meta name="description" content="Yannick Scho - Web developer portfolio" />
                     <link rel="manifest" href="/manifest.json"/>
                     <meta name="theme-color" content="#eff1f5" />
