@@ -3,7 +3,7 @@ import { StyledGithubIconWrapper } from './StyledGithubIcon';
 
 const GithubIcon: React.FC = () => (
     <StyledGithubIconWrapper
-        href="https://github.com/yannickscho1"
+        href="https://github.com/schoyannick"
         target="_blank"
         rel="noreferrer"
     >
@@ -27,7 +27,7 @@ const GithubIcon: React.FC = () => (
                 fontSize: '14px',
             }}
         >
-            yannickscho1
+            schoyannick
         </div>
     </StyledGithubIconWrapper>
 );

@@ -9,7 +9,7 @@ export const StyledItems = styled.ul`
     display: flex;
     margin: 0;
     
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 500px) {
         display: none;
     }
 `;
@@ -53,16 +53,19 @@ export const StyledIcon = styled('div')<{ isActive: boolean }>`
     cursor: pointer;
     padding: 3px;
     margin: -3px;
-    margin-top: 2px;
-    transition: all .5s;
+    transition: opacity .5s, transform .5s;
     transform: ${props => !props.isActive ? 'rotate(-180deg) scale(.5)' : ''};
     opacity: ${props => !props.isActive ? '0' : '1'};
     position: absolute;
-    top: 0;
+    top: 5px;
     z-index: ${props => !props.isActive ? '0' : '10'};
 
     &:hover {
         background-color: var(--hover-color);
         border-radius: 3px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        top: 0px;
     }
 `;

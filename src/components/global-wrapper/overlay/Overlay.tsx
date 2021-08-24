@@ -33,7 +33,7 @@ const Overlay: React.FC = () => {
     }, [isOverlayShown]);
 
     useEffect(() => {
-        if (isOverlayShown && width > 450) {
+        if (isOverlayShown && width > 500) {
             dispatch(setIsOverlayShown(false));
         }
     }, [dispatch, isOverlayShown, width]);

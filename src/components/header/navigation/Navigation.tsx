@@ -41,14 +41,18 @@ const Navigation: React.FC = () => {
                     onClick={handleColorThemeChange}
                     isActive={colorTheme === ColorTheme.DARK}
                 >
-                    <BsMoon/>
+                    <BsMoon
+                        size={20}
+                    />
                 </StyledIcon>
 
                 <StyledIcon
                     onClick={handleColorThemeChange}
                     isActive={colorTheme === ColorTheme.LIGHT}
                 >
-                    <BsSun/>
+                    <BsSun
+                        size={20}
+                    />
                 </StyledIcon>
             </StyledIconWrapper>
                 
