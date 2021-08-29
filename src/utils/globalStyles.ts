@@ -1,13 +1,13 @@
 import { createGlobalStyle} from 'styled-components';
 
 export const lightTheme = {
-    body: 'rgb(239 241 245)',
+    body: 'rgb(239, 241, 245)',
     text: '#363537',
     reverse: 'white',
-    hover: '',
+    hover: 'rgb(197 197 202)',
     scrollbar: '',
-    primary: 'rgb(68 51 255)',
-    grey: 'rgb(90 96 114)',
+    primary: 'rgb(68, 51, 255)',
+    grey: 'rgb(90, 96, 114)',
 };
 
 export const darkTheme = {
@@ -16,8 +16,8 @@ export const darkTheme = {
     reverse: 'black',
     hover: '#5f5f69',
     scrollbar: '#00000080',
-    primary: 'rgb(87 115 255)',
-    grey: 'rgb(156 168 180)',
+    primary: 'rgb(87, 115, 255)',
+    grey: 'rgb(156, 168, 180)',
 };
 
 export const GlobalStyles = createGlobalStyle<{

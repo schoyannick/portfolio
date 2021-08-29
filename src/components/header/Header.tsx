@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/dist/client/router';
 
+import Link from 'next/link';
 import { SelectedPage, setSelectedPage } from '../../redux/app/actions';
 import { StyledHeader, StyledHeaderMargin, StyledLogo } from './HeaderStyles';
 import Navigation from './navigation/Navigation';
@@ -29,9 +30,14 @@ const Header: React.FC = () => {
             className="header"
         >
             <StyledHeaderMargin>
-                <StyledLogo>
-                    Yannick Scho
-                </StyledLogo>
+                <Link
+                    href="/"
+                    passHref
+                >
+                    <StyledLogo>
+                        Yannick Scho
+                    </StyledLogo>
+                </Link>
 
                 <Navigation/>
             </StyledHeaderMargin>

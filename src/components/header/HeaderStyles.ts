@@ -22,4 +22,5 @@ export const StyledLogo = styled.div`
     font-size: 24px;
     font-weight: bold;
     letter-spacing: -1px;
+    cursor: pointer;
 `;
