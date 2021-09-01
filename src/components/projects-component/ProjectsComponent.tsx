@@ -1,6 +1,7 @@
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import React from 'react';
 import { useSelector } from 'react-redux';
+
 import { PROJECT_DATA } from '../../constants/projectData';
 import { ColorTheme } from '../../redux/app/actions';
 import { getColorTheme } from '../../redux/app/selectors';
