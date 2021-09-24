@@ -1,5 +1,5 @@
 import React, { useRef , useState } from 'react';
-import {GiHamburgerMenu} from 'react-icons/gi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsOverlayShown } from '../../../redux/app/actions';
 import { getIsOverlayShown } from '../../../redux/app/selectors';

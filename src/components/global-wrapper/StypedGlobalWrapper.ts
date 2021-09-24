@@ -18,7 +18,7 @@ export const StyledGlobalWrapperContent = styled.div`
     max-width: 1100px;
     width: calc(100% - 40px);
     animation: fadeIn .3s linear;
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 250px);
 
     @keyframes fadeIn {
         0% {
