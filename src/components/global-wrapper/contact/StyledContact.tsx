@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledContact = styled.div`
     max-width: 1100px;
     width: calc(100% - 40px);
-    margin: 32px auto 50px;
+    margin: 75px auto 50px;
 `;
 
 export const StyledContactHeader = styled.h1`

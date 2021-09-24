@@ -67,7 +67,7 @@ const HomeTerminal: React.FC = () => (
             <StyledTab><StyledCodePurple>langs</StyledCodePurple>: [
                 &apos;<StyledCodeGreen>JavaScript</StyledCodeGreen>&apos;,
                 &apos;<StyledCodeGreen>Typescript</StyledCodeGreen>&apos;,
-                &apos;<StyledCodeGreen>SQL</StyledCodeGreen>&apos;],
+                &apos;<StyledCodeGreen>CSS</StyledCodeGreen>&apos;],
             </StyledTab>
             &#125;
             <div>&nbsp;</div>
