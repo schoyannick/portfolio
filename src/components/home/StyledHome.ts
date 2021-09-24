@@ -1,19 +1,14 @@
 import styled from 'styled-components';
 
-export const StyledHome = styled.div`
+export const StyledHomeWrapper = styled.div`
+    display: flex;
     width: 100%;
-`;
 
-export const StyledHomeHeader = styled.div`
-    margin-bottom: 15px;
-    font-weight: 500;
-`;
-
-export const StyledHomeText = styled.span`
-    font-size: 30px;
-`;
-
-export const StyledHomeName = styled.span`
-    font-size: 30px;
-    font-weight: bold;
+    @media only screen and (max-width: 680px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
 `;
