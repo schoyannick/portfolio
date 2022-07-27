@@ -30,7 +30,6 @@
 	"react/jsx-props-no-spreading": "off",
 	"react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
 	"semi": "error",
-	"quotes": ["error", "single"],
 	"no-unused-vars": "off",
 	"@typescript-eslint/no-unused-vars": "off",
 	"no-param-reassign": ["off", { "props": true, "ignorePropertyModificationsForRegex": ["draft"] }],

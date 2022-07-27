@@ -29,6 +29,7 @@ const GmailIcon: React.FC = () => {
                 </svg>
             </a>
             <StyledGmailText
+                className='mail-copy'
                 onClick={() => {
                     navigator.clipboard.writeText('scho.yannick@gmail.com');
                     setDidCopy(true);
