@@ -1,8 +1,8 @@
+import { AppProps } from 'next/dist/next-server/lib/router/router';
 import { InferProps } from 'prop-types';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { AppProps } from 'next/app';
 import { ColorTheme, setMetrics } from '../../redux/app/actions';
 import { getColorTheme, getIsOverlayShown } from '../../redux/app/selectors';
 import { darkTheme, GlobalStyles, lightTheme } from '../../utils/globalStyles';
